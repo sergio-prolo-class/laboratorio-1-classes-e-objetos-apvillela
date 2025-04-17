@@ -4,11 +4,9 @@
 package ifsc.poo;
 
 public class App {
-    
-    
 
     public static void main(String[] args) {
-        ////////////////Exercicio 1 - Lampada//////////////
+        //////////////// Exercicio 1 - Lampada//////////////
         Lampada lampadaUm = new Lampada();
         lampadaUm.ligar();
         if (lampadaUm.verEstado()) {
@@ -25,7 +23,7 @@ public class App {
             System.out.println("Desligada");
         }
 
-        ////////////////Exercicio 2 - Pessoa//////////////
+        //////////////// Exercicio 2 - Pessoa//////////////
         Pessoa alice = new Pessoa("Alice", 22);
         Pessoa bruno = new Pessoa("Bruno", 25);
 
@@ -41,7 +39,7 @@ public class App {
             System.out.println("Erro ao definir idade: " + e.getMessage());
         }
         System.out.println(alice.getIdade());
-        
+
         try {
             bruno.setNome("    ");
         } catch (IllegalArgumentException e) {
@@ -49,12 +47,18 @@ public class App {
         }
         System.out.println(bruno.getNome());
 
-        ////////////////Exercicio 3 - Retangulo//////////////
-        Retangulo retanguloUm = new Retangulo();
-        retanguloUm.setAltura(4);
-        retanguloUm.setLargura(5);
-        System.out.println(retanguloUm.getArea());
-        System.out.println(retanguloUm.getPerimetro());
+        //////////////// Exercicio 3 - Retangulo//////////////
+        Retangulo retanguloUm = new Retangulo(1, 1);
+        // retanguloUm.setAltura(4);
+        // retanguloUm.setLargura(5);
+        // System.out.println(retanguloUm.getArea());
+        // System.out.println(retanguloUm.getPerimetro());
+        System.out.println("Maior Retangulo: " + Retangulo.maiorRetangulo);
+        System.out.println("Menor Retangulo: " + Retangulo.menorRetangulo);
+
+        Retangulo retangulo2 = new Retangulo(12, 12);
+
+        System.out.println("Maior Retangulo: " + Retangulo.maiorRetangulo);
 
     }
 }

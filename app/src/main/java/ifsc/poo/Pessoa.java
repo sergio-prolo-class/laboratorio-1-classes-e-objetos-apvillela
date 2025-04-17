@@ -4,10 +4,22 @@ public class Pessoa {
 
     private String nome;
     private int idade;
+    private String cpf;
+
+    public Pessoa(String nome, int idade, String cpf) {
+        setNome(nome);
+        setIdade(idade);
+        setCpf(cpf);
+    }
 
     public Pessoa(String nome, int idade) {
         setNome(nome);
         setIdade(idade);
+        setCpf("123.456.789-00");
+    }
+
+    public Pessoa(String cpf) {
+        setCpf(this.cpf);
     }
 
     public void setNome(String nome) {
@@ -24,6 +36,14 @@ public class Pessoa {
         this.idade = idade;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -31,7 +51,7 @@ public class Pessoa {
     public int getIdade() {
         return idade;
     }
-    
+
     public void felizAniversario() {
         idade++;
     }
