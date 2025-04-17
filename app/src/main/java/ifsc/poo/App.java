@@ -4,11 +4,57 @@
 package ifsc.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+    
+    
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        ////////////////Exercicio 1 - Lampada//////////////
+        Lampada lampadaUm = new Lampada();
+        lampadaUm.ligar();
+        if (lampadaUm.verEstado()) {
+            System.out.println("Ligada");
+        } else {
+            System.out.println("Desligada");
+        }
+
+        Lampada lampadaDois = new Lampada();
+        lampadaDois.desligar();
+        if (lampadaDois.verEstado()) {
+            System.out.println("Ligada");
+        } else {
+            System.out.println("Desligada");
+        }
+
+        ////////////////Exercicio 2 - Pessoa//////////////
+        Pessoa alice = new Pessoa("Alice", 22);
+        Pessoa bruno = new Pessoa("Bruno", 25);
+
+        bruno.felizAniversario();
+        bruno.felizAniversario();
+        bruno.felizAniversario();
+
+        System.out.println(bruno.getIdade() + " " + alice.getIdade());
+
+        try {
+            alice.setIdade(-44);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro ao definir idade: " + e.getMessage());
+        }
+        System.out.println(alice.getIdade());
+        
+        try {
+            bruno.setNome("    ");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro ao definir nome: " + e.getMessage());
+        }
+        System.out.println(bruno.getNome());
+
+        ////////////////Exercicio 3 - Retangulo//////////////
+        Retangulo retanguloUm = new Retangulo();
+        retanguloUm.setAltura(4);
+        retanguloUm.setLargura(5);
+        System.out.println(retanguloUm.getArea());
+        System.out.println(retanguloUm.getPerimetro());
+
     }
 }
