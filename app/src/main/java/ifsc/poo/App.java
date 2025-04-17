@@ -60,5 +60,6 @@ public class App {
 
         System.out.println("Maior Retangulo: " + Retangulo.maiorRetangulo);
 
+        Navio portaAvioes = new Navio("Porta Aviões", 'P', 5, 3, 3, true);
     }
 }
